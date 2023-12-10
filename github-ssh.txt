@@ -1,0 +1,15 @@
+# go to keydir
+mkdir .ssh 
+cd .ssh
+
+# make private key 
+ssh-keygen -t rsa -b 4096 -C anarakinson@gmail.com
+
+# make public key
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
+# add github to trusted sites
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+# add public key on github via website
+ 
