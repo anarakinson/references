@@ -1,0 +1,68 @@
+chegit config credential.helper store
+# store keys
+
+git config --global user.name <username>
+git config --global user.email <email>
+
+git init
+# make local repository
+
+git add *
+# or
+git add .
+# add all files in directory to commit list
+
+git commit -m 'commentary to commit'
+# commit
+
+git remote add origin https://github.com/anarakinson/repository.git
+# connect to repository on github
+git remote set-url origin https://github.com/anarakinson/repository.git
+# change repository url
+
+git branch -M <branchname>
+# or
+git checkout <branchname>
+# choose branch
+git checkout -b <branchname>
+# create branch and choose it
+git branch -m new-name
+# rename current branch
+git branch --delete
+# delete branch
+
+git tag v1.0.0
+# create tag
+
+git tag -d v1.0.0
+# delete tag
+
+git push -u origin main
+git push -u origin main --force
+# push to github
+git push origin main --tags
+# push with tags
+git push --delete origin <tag>
+# delete remote tag
+
+git pull origin main
+# pull from github
+git pull origin main --allow-unrelated-histories
+# pull and merge github with local repository
+
+git log --graph -10
+# return git log tree
+
+git reset
+# remove all added files
+
+git reset --hard/soft <commit>
+# return changes to commit
+
+git rm {file} --cached
+# remove file from cash, if it must be untracked
+
+git rebase
+# move HEAD to current commit
+git rebase head main
+# move main tag to the head commit
